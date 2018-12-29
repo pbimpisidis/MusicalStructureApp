@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#0D0630">
+    android:background="#0D0630"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:text="@string/intro"
         android:textColor="#999999"
-        android:textSize="20dp"
-        android:text="Welcome to our song database!\n Here you can browse songs from the 70's and the 80's!" />
+        android:textSize="20sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Browse Songs"
-        android:textSize="28dp"
+        android:layout_centerInParent="true"
         android:padding="28dp"
-        android:layout_centerInParent="true"/>
-
+        android:text="@string/browse_songs"
+        android:textSize="28sp" />
+    
 </RelativeLayout>
+
+
+

@@ -12,7 +12,7 @@ public class SongLibrary extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_song_library);
 
         // Create a list of words
         ArrayList<Song> library = new ArrayList<>();
