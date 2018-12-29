@@ -66,21 +66,13 @@ public class SongLibrary extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                if (position == 1) {
-                    //code specific to first list item
-                    Intent myIntent = new Intent(SongLibrary.this, PlaySongActivity.class);
-                    String selectedSong = library.get(position).getSongTitle();
-                    String selectedArtist = library.get(position).getArtist();
-                    myIntent.putExtra("selectedSong", selectedSong);
-                    myIntent.putExtra("selectedArtist", selectedArtist);
-                    startActivity(myIntent);
-
-
-                }
+                Intent myIntent = new Intent(SongLibrary.this, PlaySongActivity.class);
+                String selectedSong = library.get(position).getSongTitle();
+                String selectedArtist = library.get(position).getArtist();
+                myIntent.putExtra("selectedSong", selectedSong);
+                myIntent.putExtra("selectedArtist", selectedArtist);
+                startActivity(myIntent);
             }
-
-
         });
     }
 }
