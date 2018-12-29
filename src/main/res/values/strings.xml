@@ -2,4 +2,5 @@
     <string name="app_name">Musical Structure App</string>
     <string name="intro">Welcome to our song database! \nHere you can browse songs from the 70\'s and the 80\'s!</string>
     <string name="browse_songs">Browse Songs</string>
+    <string name="activity_song_library_title">Song Library</string>
 </resources>
