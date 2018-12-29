@@ -18,8 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SongLibrary" android:label="@string/activity_song_library_title"/>
+        <activity
+            android:name=".SongLibrary"
+            android:label="@string/activity_song_library_title" />
+        <activity
+            android:name=".PlaySongActivity"
+            android:label="@string/activity_play_song_title"/>
     </application>
 
 </manifest>

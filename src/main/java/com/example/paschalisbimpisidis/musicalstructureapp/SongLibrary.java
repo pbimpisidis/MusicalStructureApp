@@ -1,11 +1,16 @@
 package com.example.paschalisbimpisidis.musicalstructureapp;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SongLibrary extends AppCompatActivity {
 
@@ -15,7 +20,7 @@ public class SongLibrary extends AppCompatActivity {
         setContentView(R.layout.activity_song_library);
 
         // Create a list of words
-        ArrayList<Song> library = new ArrayList<>();
+        final ArrayList<Song> library = new ArrayList<>();
         library.add(new Song("Ain't No Sunshine", "Bill Withers"));
         library.add(new Song("Walk This Way", "Aerosmith"));
         library.add(new Song("More Than a Feeling", "Boston"));
@@ -57,5 +62,25 @@ public class SongLibrary extends AppCompatActivity {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 1) {
+                    //code specific to first list item
+                    Intent myIntent = new Intent(SongLibrary.this, PlaySongActivity.class);
+                    String selectedSong = library.get(position).getSongTitle();
+                    String selectedArtist = library.get(position).getArtist();
+                    myIntent.putExtra("selectedSong", selectedSong);
+                    myIntent.putExtra("selectedArtist", selectedArtist);
+                    startActivity(myIntent);
+
+
+                }
+            }
+
+
+        });
     }
 }
