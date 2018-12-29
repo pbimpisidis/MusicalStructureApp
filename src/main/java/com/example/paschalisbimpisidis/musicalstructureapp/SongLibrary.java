@@ -7,12 +7,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Songs extends AppCompatActivity {
+public class SongLibrary extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.activity_main);
 
         // Create a list of words
         ArrayList<Song> library = new ArrayList<>();
@@ -45,13 +45,13 @@ public class Songs extends AppCompatActivity {
         library.add(new Song("Call Me", "Blondie"));
         library.add(new Song("Gloria", "Laura Branigan"));
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link SongAdapter}, whose data source is a list of {@link Song}s. The
         // adapter knows how to create list items for each item in the list.
         SongAdapter adapter = new SongAdapter(this, library);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // activity_list_item.xml layout file.
         ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
