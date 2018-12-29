@@ -3,18 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/song_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Song Title" />
+        tools:text="Song Title"
+        android:textColor="#999999"/>
 
     <TextView
         android:id="@+id/artist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Artist" />
+        tools:text="Artist"
+        android:textColor="#999999"/>
 
 </LinearLayout>
