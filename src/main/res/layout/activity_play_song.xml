@@ -8,25 +8,15 @@
 
     <TextView
         android:id="@+id/playedSong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/play_song_details_style"
         android:layout_above="@+id/playedSongArtist"
-        android:layout_margin="8dp"
-        android:text="Song title"
-        android:textAlignment="center"
-        android:textColor="#999999"
-        android:textSize="24sp" />
+        android:text="@string/default_song_title" />
 
     <TextView
         android:id="@+id/playedSongArtist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/play_song_details_style"
         android:layout_above="@+id/play_image"
-        android:layout_margin="8dp"
-        android:text="Artist"
-        android:textAlignment="center"
-        android:textColor="#999999"
-        android:textSize="24sp" />
+        android:text="@string/default_artist" />
 
     <ImageView
         android:id="@+id/play_image"
@@ -35,7 +25,7 @@
         android:layout_centerInParent="true"
         android:background="@android:color/transparent"
         android:contentDescription="@string/activity_play_song_title"
-        android:src="@drawable/play" />
+        android:src="@mipmap/play1" />
 
     <TextView
         android:id="@+id/back"
@@ -44,7 +34,7 @@
         android:layout_alignParentBottom="false"
         android:layout_margin="8dp"
         android:padding="8dp"
-        android:text="Back to Library"
+        android:text="@string/back_to_library"
         android:textColor="#999999"
         android:textSize="18sp" />
 

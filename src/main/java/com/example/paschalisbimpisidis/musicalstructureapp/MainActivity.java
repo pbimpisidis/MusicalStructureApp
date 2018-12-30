@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Set a click listener on that View
         browse.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the numbers category is clicked on.
+            // The code in this method will be executed when the browse songs button is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
+                // Create a new intent to open the {@link SongLibrary}
                 Intent browseIntent = new Intent(MainActivity.this, SongLibrary.class);
 
                 // Start the new activity

@@ -1,8 +1,8 @@
 package com.example.paschalisbimpisidis.musicalstructureapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -57,7 +57,7 @@ public class SongLibrary extends AppCompatActivity {
         ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link SongAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // {@link ListView} will display list items for each {@link Song} in the list.
         listView.setAdapter(adapter);
 
         // Set clickListener on the {@link ListView} so that it navigates to PlaySong Activity

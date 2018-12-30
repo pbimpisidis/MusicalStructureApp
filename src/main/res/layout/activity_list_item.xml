@@ -10,14 +10,14 @@
         android:id="@+id/song_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Song Title"
-        android:textColor="#999999"/>
+        android:textColor="#999999"
+        tools:text="Song Title" />
 
     <TextView
         android:id="@+id/artist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Artist"
-        android:textColor="#999999"/>
+        android:textColor="#999999"
+        tools:text="Artist" />
 
 </LinearLayout>

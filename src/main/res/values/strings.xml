@@ -3,6 +3,8 @@
     <string name="intro">Welcome to our song database! \nHere you can browse songs from the 70\'s and the 80\'s!</string>
     <string name="browse_songs">Browse Songs</string>
     <string name="activity_song_library_title">Song Library</string>
-    <string name="title_activity_play_song">play_song</string>
     <string name="activity_play_song_title">Play song</string>
+    <string name="default_song_title">Song title</string>
+    <string name="default_artist">Artist</string>
+    <string name="back_to_library">Back to Library</string>
 </resources>
