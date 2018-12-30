@@ -1,10 +1,12 @@
 package com.example.paschalisbimpisidis.musicalstructureapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PlaySongActivity extends AppCompatActivity {
 
@@ -38,6 +40,19 @@ public class PlaySongActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(backIntent);
+            }
+        });
+
+        // Find the Image that plays the song
+        ImageView playImage = findViewById(R.id.play_image);
+
+        // Set a click listener on that View
+        playImage.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the ImageView is clicked on.
+            @Override
+            public void onClick(View view) {
+                String playMessage = "Start song";
+                Toast.makeText(PlaySongActivity.this, playMessage, Toast.LENGTH_SHORT).show();
             }
         });
     }
