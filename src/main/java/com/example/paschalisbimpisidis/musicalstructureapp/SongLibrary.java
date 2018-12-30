@@ -1,16 +1,13 @@
 package com.example.paschalisbimpisidis.musicalstructureapp;
 
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SongLibrary extends AppCompatActivity {
 
@@ -19,7 +16,7 @@ public class SongLibrary extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_library);
 
-        // Create a list of words
+        // Create a list of songs
         final ArrayList<Song> library = new ArrayList<>();
         library.add(new Song("Ain't No Sunshine", "Bill Withers"));
         library.add(new Song("Walk This Way", "Aerosmith"));
@@ -59,19 +56,21 @@ public class SongLibrary extends AppCompatActivity {
         // activity_list_item.xml layout file.
         ListView listView = findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // Make the {@link ListView} use the {@link SongAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
 
+        // Set clickListener on the {@link ListView} so that it navigates to PlaySong Activity
+        // when an item is tapped, also passing the values of SongTitle and Artist.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent myIntent = new Intent(SongLibrary.this, PlaySongActivity.class);
+                Intent playSongIntent = new Intent(SongLibrary.this, PlaySongActivity.class);
                 String selectedSong = library.get(position).getSongTitle();
                 String selectedArtist = library.get(position).getArtist();
-                myIntent.putExtra("selectedSong", selectedSong);
-                myIntent.putExtra("selectedArtist", selectedArtist);
-                startActivity(myIntent);
+                playSongIntent.putExtra("selectedSong", selectedSong);
+                playSongIntent.putExtra("selectedArtist", selectedArtist);
+                startActivity(playSongIntent);
             }
         });
     }
