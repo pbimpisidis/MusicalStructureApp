@@ -12,16 +12,17 @@ public class PlaySongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_song);
 
-        Intent intent = getIntent();
-        String song = intent.getExtras().getString("selectedSong");
-        String artist = intent.getExtras().getString("selectedArtist");
+        //get the passing values of the selected {@link ListView} item
+        Intent playSongIntent = getIntent();
+        String song = playSongIntent.getExtras().getString("selectedSong");
+        String artist = playSongIntent.getExtras().getString("selectedArtist");
 
+        //find the TextViews in the Activity and update their values
         TextView songTextView = findViewById(R.id.playedSong);
         songTextView.setText(song);
 
         TextView songArtistView = findViewById(R.id.playedSongArtist);
         songArtistView.setText(artist);
     }
-
 
 }
